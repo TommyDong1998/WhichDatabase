@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+header{
+    width:100%;
+    text-align: center;
+    background: #4c87d4;
+    padding: 20px;
+}
+header h1{
+    margin:0;
+}
+.content{
+    padding-top: 20px;
+    width: 75%;
+    min-width: 720px;
+    margin: auto;
+    display:flex;
+}
+.content >div{
+    flex: 1;
+}
+
+.dbtype{
+    margin:20px 0 20px 0;
+}
+.dbtype .category{
+    font-weight: bold;
+}
+.dbtype .db{
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 0 1px black;
+    color: white;
+    background: #77f1d2;
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #5d7d72;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.db:first-of-type{
+    margin-left:0;
+}
