@@ -12,65 +12,81 @@
     </header>
 
     <div class="content">
-        <b>Use case</b><br/>
+        <div id="selection">
+
+            
+            <b>Use case</b><br/>
         
-        Key value database
-        <input type="radio"/>
-        <br/>
-        
-        Graph Database
-        <input type="radio"/>
-        <br/>
+            Key value database
+            <input type="radio"/>
+            <br/>
+            
+            Graph Database
+            <input type="radio"/>
+            <br/>
+    
+            Memory Database
+            <input type="radio"/>
+            <br/>
+    
+            Document Database
+            <input type="radio"/>
+            <br/>
+    
+    
+            <b>Consistency</b><br/>
+            
+            Immediate
+            <input type="radio"/>
+            <br/>
+    
+            Asynchronous
+            <input type="radio"/>   
+            <br/>
+    
+            <b>Scaling</b><br/>
+            Easier Horizontal
+            <input type="radio"/>
+            <br/>
+    
+            Easier Vertical
+            <input type="radio"/>
+            <br/>
+    
+            <b>Do you need SQL?</b>
+            Yes
+            <input type="radio"/>
+            <br/>
+            No
+            <input type="radio"/>
+            <br/>
+    
+            <b>Which cloud provider do you plan on using?</b>
+            AWS
+            <input type="radio"/>
+            <br/>
+            Azure
+            <input type="radio"/>
+            <br/>
+            GCP
+            <input type="radio"/>
+            <br/>
+            Other/Don't matter
+            <input type="radio"/>
+            <br/>
+        </div>
 
-        Memory Database
-        <input type="radio"/>
-        <br/>
-
-        Document Database
-        <input type="radio"/>
-        <br/>
-
-
-        <b>Consistency</b><br/>
-        
-        Immediate
-        <input type="radio"/>
-        <br/>
-
-        Asynchronous
-        <input type="radio"/>
-        <br/>
-
-        <b>Scaling</b><br/>
-        Easier Horizontal
-        <input type="radio"/>
-        <br/>
-
-        Easier Vertical
-        <input type="radio"/>
-        <br/>
-
-        <b>Do you need SQL?</b>
-        Yes
-        <input type="radio"/>
-        <br/>
-        No
-        <input type="radio"/>
-        <br/>
-
-        <b>Which cloud provider do you plan on using?</b>
-        AWS
-        <input type="radio"/>
-        <br/>
-        Azure
-        <input type="radio"/>
-        <br/>
-        GCP
-        <input type="radio"/>
-        <br/>
-        Other/Don't matter
-        <input type="radio"/>
-        <br/>
+        <div id="databases">
+            <div class="db">
+                <div class="category">
+                    SQL
+                </div>
+                <div class="list">
+                    MYSQl<br/>
+                    Postgres
+                </div>    
+            </div>
+        </div>
     </div>
 </body>
 </html>
