@@ -5,10 +5,11 @@ body{
     margin: 0;
 }
 header{
-    width:100%;
-    text-align: center;
-    background: #4c87d4;
+    /* text-align: center; */
+    /* background: #4c87d4; */
     padding: 20px;
+    padding-left: 12%;
+    border-bottom: #dbdbdb 1px solid;
 }
 header h1{
     margin:0;
@@ -25,8 +26,13 @@ header h1{
 }
 
 .dbtype{
-    margin:20px 0 20px 0;
+    margin:10px 0 0 0;
 }
+
+.dbtype .list{
+    display: flex;
+}
+
 .dbtype .category{
     font-weight: bold;
 }
@@ -35,7 +41,7 @@ header h1{
     font-weight: bold;
     text-shadow: 0 1px black;
     color: white;
-    background: #77f1d2;
+    background: #4c87d4;
     width: 100px;
     padding: 10px;
     margin: 10px;
