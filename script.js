@@ -37,6 +37,8 @@ function createDiv(c){
     return d;
 }
 
+//List all databases and add element property to the database
+//Ex: database["Relational"][0].element would reference the html element
 Object.keys(databases).forEach(dbtype => {
     let dbtypeElement=createDiv('dbtype')
     dbElement.appendChild(dbtypeElement);
@@ -48,8 +50,9 @@ Object.keys(databases).forEach(dbtype => {
     let list=createDiv('list');
     dbtypeElement.appendChild(list);
 
-    databases[dbtype].forEach((db)=>{
+    databases[dbtype].forEach((db,idx)=>{
         let dbElement=createDiv('db');
+        databases[dbtype][idx].element=dbElement;
         dbElement.innerText=db.name;
         list.appendChild(dbElement);
     })
