@@ -25,7 +25,7 @@ header h1{
     flex: 1;
 }
 
-.dbtype{
+.dbtype, .questionCategory{
     margin:10px 0 0 0;
 }
 
@@ -33,7 +33,7 @@ header h1{
     display: flex;
 }
 
-.dbtype .category{
+.dbtype .category, .questionCategory .category{
     font-weight: bold;
 }
 .dbtype .db{
@@ -52,4 +52,13 @@ header h1{
 
 .db:first-of-type{
     margin-left:0;
+}
+
+.question{
+    border-radius: 20px;
+    background: #a5c7e6;
+    padding: 10px;
+    display: inline-block;
+    color: white;
+    margin:10px;
 }
