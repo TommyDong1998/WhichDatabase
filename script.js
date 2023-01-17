@@ -18,6 +18,14 @@ const databases = {
       name: "Aurora",
       tags: ["relation", "consistent_immediate", "proprietary","commonusecase_login"],
     },
+    {
+      name: "IBM Db2",
+      tags: ["relation", "consistent_immediate", "proprietary","commonusecase_login"],
+    },
+    {
+      name: "Microsoft SQL server",
+      tags: ["relation", "consistent_immediate", "proprietary","commonusecase_login"],
+    }
   ],
   Graph: [{ name: "Neptune", tags: ["graph", "proprietary","commonusecase_visualize"] }],
   "Key Value": [
