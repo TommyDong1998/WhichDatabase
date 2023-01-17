@@ -19,6 +19,7 @@ header h1{
     display:flex;
     max-width: 100vw;
     flex-wrap: wrap;
+    min-height: 100vh;
 }
 .content >div{
     min-width: 400px;
@@ -65,4 +66,14 @@ header h1{
     display: inline-block;
     color: white;
     margin:10px;
+}
+
+footer{
+    background:#4c87d4;
+    color:white;
+    text-align: center;
+    padding:50px;
+}
+footer a{
+    color:white !important;
 }
