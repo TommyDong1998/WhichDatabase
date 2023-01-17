@@ -19,6 +19,7 @@ const databases = {
           "consistent_immediate",
           "opensource",
           "commonusecase_login",
+          "filedatabase"
         ],
       },
       {
@@ -158,6 +159,14 @@ const databases = {
 };
 
 const questions = {
+  "Common use cases": [
+    { name: "Any", tags: [] },
+    { name: "Login/Register", tags: ["commonusecase_login"] },
+    { name: "Visualize relationships", tags: ["commonusecase_visualize"] },
+    { name: "Monetary transactions", tags: ["consistent_immediate"] },
+    { name: "Caching applications", tags: ["memory"] },
+    { name: "Lightweight file database", tags: ["filedatabase"] }
+  ],
   "Database Type": [
     { name: "Any", tags: [] },
     { name: "Relation", tags: ["relation"] },
@@ -167,12 +176,6 @@ const questions = {
     { name: "Key Value", tags: ["keyvalue"] },
     { name: "Time Series", tags: ["timeseries"] },
     { name: "Ledger", tags: ["ledger"] },
-  ],
-  "Common use cases": [
-    { name: "Any", tags: [] },
-    { name: "Login/Register", tags: ["commonusecase_login"] },
-    { name: "Visualize relationships", tags: ["commonusecase_visualize"] },
-    { name: "Monetary transactions", tags: ["consistent_immediate"] },
   ],
   Consistent: [
     { name: "Any", tags: [] },
