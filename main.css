@@ -40,6 +40,7 @@ header h1{
 .dbtype .category, .questionCategory .category{
     font-weight: bold;
 }
+
 .dbtype .db{
     font-size: 15px;
     font-weight: bold;
@@ -76,4 +77,17 @@ footer{
 }
 footer a{
     color:white !important;
+}
+
+.category > div{
+    background: #a5b4b4;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    display: inline-block;
+    margin-left: 10px;
 }
