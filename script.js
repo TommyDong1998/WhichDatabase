@@ -23,7 +23,7 @@ const databases = {
   "Key Value": [
     {
       name: "DynamoDB",
-      tags: ["keyvalue", "consistent_immediate", "proprietary"],
+      tags: ["keyvalue", "consistent_immediate", "proprietary","horizontal_scaling"],
     },
   ],
   Memory: [
@@ -31,7 +31,7 @@ const databases = {
     { name: "Redis", tags: ["memory", "opensource"] },
   ],
   Document: [
-    { name: "MongoDB", tags: ["document", "opensource"] },
+    { name: "MongoDB", tags: ["document", "opensource", "horizontal_scaling"] },
     { name: "DocumentDB", tags: ["document", "proprietary"] },
     { name: "CosmosDB", tags: ["document", "keyvalue", "proprietary"] },
   ],
@@ -53,6 +53,10 @@ const questions = {
   Consistent: [
     { name: "Any", tags: [] },
     { name: "Immediate", tags: ["consistent_immediate"] },
+  ],
+  "Easy to horizontal scale": [
+    { name: "Any", tags: [] },
+    { name: "Yes", tags: ["horizontal_scaling"] }
   ],
   "Open Source": [
     { name: "Any", tags: [] },
