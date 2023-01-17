@@ -27,12 +27,15 @@ const databases = {
       tags: ["relation", "consistent_immediate", "proprietary","commonusecase_login"],
     }
   ],
-  Graph: [{ name: "Neptune", tags: ["graph", "proprietary","commonusecase_visualize"] }],
+  Graph: [
+    { name: "Neptune", tags: ["graph", "proprietary","commonusecase_visualize"] },
+    { name: "Neo4J", tags: ["graph", "proprietary","commonusecase_visualize"] }
+  ],
   "Key Value": [
     {
       name: "DynamoDB",
       tags: ["keyvalue", "consistent_immediate", "proprietary","horizontal_scaling","commonusecase_login"],
-    },
+    }
   ],
   Memory: [
     { name: "Memcached", tags: ["memory", "opensource"] },
