@@ -29,13 +29,14 @@ const databases = {
   ],
   Graph: [
     { name: "Neptune", tags: ["graph", "proprietary","commonusecase_visualize"] },
-    { name: "Neo4J", tags: ["graph", "proprietary","commonusecase_visualize"] }
+    { name: "Neo4J", tags: ["graph", "opensource","commonusecase_visualize"] }
   ],
   "Key Value": [
     {
       name: "DynamoDB",
       tags: ["keyvalue", "consistent_immediate", "proprietary","horizontal_scaling","commonusecase_login"],
-    }
+    },
+    { name: "CosmosDB", tags: ["document", "keyvalue","unstructured", "proprietary","commonusecase_login","consistent_immediate"] }
   ],
   Memory: [
     { name: "Memcached", tags: ["memory", "opensource"] },
@@ -46,7 +47,10 @@ const databases = {
     { name: "DocumentDB", tags: ["document", "proprietary","unstructured","commonusecase_login","consistent_immediate"] },
     { name: "CosmosDB", tags: ["document", "keyvalue","unstructured", "proprietary","commonusecase_login","consistent_immediate"] },
   ],
-  "Time Series": [{ name: "Timeseries", tags: ["Timestream"] }],
+  "Time Series": [
+    { name: "Timeseries", tags: ["Timestream","proprietary"] },
+    { name: "InfluxDB", tags: ["Timestream","opensource"] },
+  ],
   Ledger: [{ name: "QLDB", tags: ["ledger", "proprietary"] }],
 };
 
