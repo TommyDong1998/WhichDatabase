@@ -35,7 +35,7 @@ const databases = {
     { name: "DocumentDB", tags: ["document", "proprietary","unstructured","commonusecase_login","consistent_immediate"] },
     { name: "CosmosDB", tags: ["document", "keyvalue","unstructured", "proprietary","commonusecase_login","consistent_immediate"] },
   ],
-  "Time Series": [{ name: "Timeseries", tags: ["timeseries"] }],
+  "Time Series": [{ name: "Timeseries", tags: ["Timestream"] }],
   Ledger: [{ name: "QLDB", tags: ["ledger", "proprietary"] }],
 };
 
