@@ -48,7 +48,7 @@ const databases = {
     { name: "CosmosDB", tags: ["document", "keyvalue","unstructured", "proprietary","commonusecase_login","consistent_immediate"] },
   ],
   "Time Series": [
-    { name: "Timeseries", tags: ["Timestream","proprietary"] },
+    { name: "Timestream", tags: ["Timestream","proprietary"] },
     { name: "InfluxDB", tags: ["Timestream","opensource"] },
   ],
   Ledger: [{ name: "QLDB", tags: ["ledger", "proprietary"] }],
