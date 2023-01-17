@@ -8,7 +8,7 @@ const databases = {
     },
     {
       name: "Postgres",
-      tags: ["relation", "consistent_immediate", "opensource","commonusecase_login"],
+      tags: ["relation", "consistent_immediate","unstructured", "opensource","commonusecase_login"],
     },
     {
       name: "Oracle",
@@ -31,9 +31,9 @@ const databases = {
     { name: "Redis", tags: ["memory", "opensource"] },
   ],
   Document: [
-    { name: "MongoDB", tags: ["document", "opensource", "horizontal_scaling","commonusecase_login","consistent_immediate"] },
-    { name: "DocumentDB", tags: ["document", "proprietary","commonusecase_login","consistent_immediate"] },
-    { name: "CosmosDB", tags: ["document", "keyvalue", "proprietary","commonusecase_login","consistent_immediate"] },
+    { name: "MongoDB", tags: ["document", "opensource", "unstructured", "horizontal_scaling","commonusecase_login","consistent_immediate"] },
+    { name: "DocumentDB", tags: ["document", "proprietary","unstructured","commonusecase_login","consistent_immediate"] },
+    { name: "CosmosDB", tags: ["document", "keyvalue","unstructured", "proprietary","commonusecase_login","consistent_immediate"] },
   ],
   "Time Series": [{ name: "Timeseries", tags: ["timeseries"] }],
   Ledger: [{ name: "QLDB", tags: ["ledger", "proprietary"] }],
@@ -62,7 +62,7 @@ const questions = {
   ],
   "Unstructured data": [
     { name: "Any", tags: [] },
-    { name: "Yes", tags: ["document"] },
+    { name: "Yes", tags: ["unstructured"] },
   ],
   "Easy to horizontal scale": [
     { name: "Any", tags: [] },
