@@ -23,7 +23,7 @@ const databases = {
       tags: ["relation", "consistent_immediate", "proprietary","commonusecase_login"],
     },
     {
-      name: "Microsoft SQL server",
+      name: "Microsoft SQL",
       tags: ["relation", "consistent_immediate", "proprietary","commonusecase_login"],
     }
   ],
