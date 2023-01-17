@@ -13,14 +13,17 @@ header h1{
     margin:0;
 }
 .content{
-    padding-top: 20px;
     width: 75%;
-    min-width: 720px;
     margin: auto;
+    margin-top: 20px;
     display:flex;
+    max-width: 100vw;
+    flex-wrap: wrap;
 }
 .content >div{
-    flex: 1;
+    min-width: 400px;
+    width:50%;
+    max-width: 720px;
 }
 
 .dbtype, .questionCategory{
