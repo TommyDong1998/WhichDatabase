@@ -1,29 +1,29 @@
 //List databases
 const databases = {
   Relational: [
-    { name: "MYSQL", tags: ["relation", "consistent_immediate", "opensource"] },
+    { name: "MYSQL", tags: ["relation", "consistent_immediate", "opensource","commonusecase_login"] },
     {
       name: "SQLite",
-      tags: ["relation", "consistent_immediate", "opensource"],
+      tags: ["relation", "consistent_immediate", "opensource","commonusecase_login"],
     },
     {
       name: "Postgres",
-      tags: ["relation", "consistent_immediate", "opensource"],
+      tags: ["relation", "consistent_immediate", "opensource","commonusecase_login"],
     },
     {
       name: "Oracle",
-      tags: ["relation", "consistent_immediate", "proprietary"],
+      tags: ["relation", "consistent_immediate", "proprietary","commonusecase_login"],
     },
     {
       name: "Aurora",
-      tags: ["relation", "consistent_immediate", "proprietary"],
+      tags: ["relation", "consistent_immediate", "proprietary","commonusecase_login"],
     },
   ],
-  Graph: [{ name: "Neptune", tags: ["graph", "proprietary"] }],
+  Graph: [{ name: "Neptune", tags: ["graph", "proprietary","commonusecase_visualize"] }],
   "Key Value": [
     {
       name: "DynamoDB",
-      tags: ["keyvalue", "consistent_immediate", "proprietary","horizontal_scaling"],
+      tags: ["keyvalue", "consistent_immediate", "proprietary","horizontal_scaling","commonusecase_login"],
     },
   ],
   Memory: [
@@ -31,9 +31,9 @@ const databases = {
     { name: "Redis", tags: ["memory", "opensource"] },
   ],
   Document: [
-    { name: "MongoDB", tags: ["document", "opensource", "horizontal_scaling"] },
-    { name: "DocumentDB", tags: ["document", "proprietary"] },
-    { name: "CosmosDB", tags: ["document", "keyvalue", "proprietary"] },
+    { name: "MongoDB", tags: ["document", "opensource", "horizontal_scaling","commonusecase_login","consistent_immediate"] },
+    { name: "DocumentDB", tags: ["document", "proprietary","commonusecase_login","consistent_immediate"] },
+    { name: "CosmosDB", tags: ["document", "keyvalue", "proprietary","commonusecase_login","consistent_immediate"] },
   ],
   "Time Series": [{ name: "Timeseries", tags: ["timeseries"] }],
   Ledger: [{ name: "QLDB", tags: ["ledger", "proprietary"] }],
@@ -50,9 +50,19 @@ const questions = {
     { name: "Time Series", tags: ["timeseries"] },
     { name: "Ledger", tags: ["ledger"] },
   ],
-  Consistent: [
+  "Common use cases": [
+    { name: "Any", tags: [] },
+    { name: "Login/Register", tags: ["commonusecase_login"] },
+    { name: "Visualize relationships", tags: ["commonusecase_visualize"] },
+    { name: "Monetary transactions", tags: ["consistent_immediate"] },
+  ],
+  "Consistent": [
     { name: "Any", tags: [] },
     { name: "Immediate", tags: ["consistent_immediate"] },
+  ],
+  "Unstructured data": [
+    { name: "Any", tags: [] },
+    { name: "Yes", tags: ["document"] },
   ],
   "Easy to horizontal scale": [
     { name: "Any", tags: [] },
@@ -110,13 +120,17 @@ let questionID = 0;
 
 function ToggleByQuestion(category, question) {
   //Remove all the tags with same category
+  
   filtersTags = filtersTags.filter((filter) => {
-    filter.category != category;
+    console.log(filter.category,  category)
+    return filter.category != category;
   });
+  console.log(filtersTags)
   //Add new tag
   question.tags.forEach((tag) =>
     filtersTags.push({ category: category, tag: tag })
   );
+  console.log(category,filtersTags)
   generateDatabaseOutput();
 }
 
