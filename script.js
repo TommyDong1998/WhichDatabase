@@ -71,6 +71,7 @@ const databases = {
     ],
   },
   Graph: {
+    tooltip:"Use graph models to respresent relationships",
     list: [
       {
         name: "Neptune",
@@ -83,6 +84,7 @@ const databases = {
     ],
   },
   "Key Value": {
+    tooltip:"When you need a collection of key-value pairs",
     list: [
       {
         name: "DynamoDB",
@@ -108,12 +110,14 @@ const databases = {
     ],
   },
   Memory: {
+    tooltip:"Key-value pair database stored in memory for extremely fast access",
     list: [
       { name: "Memcached", tags: ["memory", "opensource"] },
       { name: "Redis", tags: ["memory", "opensource"] },
     ],
   },
   Document: {
+    "tooltip":"Store data in JSON-like documents",
     list: [
       {
         name: "MongoDB",
@@ -150,12 +154,16 @@ const databases = {
     ],
   },
   "Time Series": {
+    "tooltip":"Database optimized for time-stamped data.",
     list: [
       { name: "Timestream", tags: ["Timestream", "proprietary"] },
       { name: "InfluxDB", tags: ["Timestream", "opensource"] },
     ],
   },
-  Ledger: { list: [{ name: "QLDB", tags: ["ledger", "proprietary"] }] },
+  Ledger: { 
+    "tooltip":"Provides immutable, transparent, cryptographically verifiable logs for transactions.",
+    list: [{ name: "QLDB", tags: ["ledger", "proprietary"] }]
+  },
 };
 
 const questions = {
