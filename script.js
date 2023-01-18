@@ -10,6 +10,7 @@ const databases = {
           "consistent_immediate",
           "opensource",
           "commonusecase_login",
+          "cost_free"
         ],
       },
       {
@@ -19,7 +20,8 @@ const databases = {
           "consistent_immediate",
           "opensource",
           "commonusecase_login",
-          "filedatabase"
+          "filedatabase",
+          "cost_free"
         ],
       },
       {
@@ -30,6 +32,7 @@ const databases = {
           "unstructured",
           "opensource",
           "commonusecase_login",
+          "cost_free"
         ],
       },
       {
@@ -39,6 +42,7 @@ const databases = {
           "consistent_immediate",
           "proprietary",
           "commonusecase_login",
+          "cost_notfree"
         ],
       },
       {
@@ -48,6 +52,7 @@ const databases = {
           "consistent_immediate",
           "proprietary",
           "commonusecase_login",
+          "cost_free"
         ],
       },
       {
@@ -57,6 +62,7 @@ const databases = {
           "consistent_immediate",
           "proprietary",
           "commonusecase_login",
+          "cost_free"
         ],
       },
       {
@@ -66,20 +72,21 @@ const databases = {
           "consistent_immediate",
           "proprietary",
           "commonusecase_login",
+          "cost_notfree"
         ],
       },
     ],
   },
   Graph: {
-    tooltip:"Use graph models to respresent relationships",
+    tooltip:"Use graph models to represent relationships",
     list: [
       {
         name: "Neptune",
-        tags: ["graph", "proprietary", "commonusecase_visualize"],
+        tags: ["graph", "proprietary", "commonusecase_visualize","cost_free"],
       },
       {
         name: "Neo4J",
-        tags: ["graph", "opensource", "commonusecase_visualize"],
+        tags: ["graph", "opensource", "commonusecase_visualize","cost_free"],
       },
     ],
   },
@@ -94,6 +101,7 @@ const databases = {
           "proprietary",
           "horizontal_scaling",
           "commonusecase_login",
+          "cost_free"
         ],
       },
       {
@@ -105,6 +113,7 @@ const databases = {
           "proprietary",
           "commonusecase_login",
           "consistent_immediate",
+          "cost_free"
         ],
       },
     ],
@@ -112,8 +121,8 @@ const databases = {
   Memory: {
     tooltip:"Key-value pair database stored in memory for extremely fast access",
     list: [
-      { name: "Memcached", tags: ["memory", "opensource"] },
-      { name: "Redis", tags: ["memory", "opensource"] },
+      { name: "Memcached", tags: ["memory", "opensource","cost_free"] },
+      { name: "Redis", tags: ["memory", "opensource","cost_free"] },
     ],
   },
   Document: {
@@ -128,6 +137,7 @@ const databases = {
           "horizontal_scaling",
           "commonusecase_login",
           "consistent_immediate",
+          "cost_free"
         ],
       },
       {
@@ -138,6 +148,7 @@ const databases = {
           "unstructured",
           "commonusecase_login",
           "consistent_immediate",
+          "cost_free"
         ],
       },
       {
@@ -149,6 +160,7 @@ const databases = {
           "proprietary",
           "commonusecase_login",
           "consistent_immediate",
+          "cost_free"
         ],
       },
     ],
@@ -156,13 +168,13 @@ const databases = {
   "Time Series": {
     "tooltip":"Database optimized for time-stamped data.",
     list: [
-      { name: "Timestream", tags: ["Timestream", "proprietary"] },
-      { name: "InfluxDB", tags: ["Timestream", "opensource"] },
+      { name: "Timestream", tags: ["Timestream", "proprietary","cost_free"] },
+      { name: "InfluxDB", tags: ["Timestream", "opensource", "cost_free"] },
     ],
   },
   Ledger: { 
     "tooltip":"Provides immutable, transparent, cryptographically verifiable logs for transactions.",
-    list: [{ name: "QLDB", tags: ["ledger", "proprietary"] }]
+    list: [{ name: "QLDB", tags: ["ledger", "proprietary","cost_free"] }]
   },
 };
 
@@ -185,6 +197,16 @@ const questions = {
     { name: "Time Series", tags: ["timeseries"] },
     { name: "Ledger", tags: ["ledger"] },
   ],
+  "Open Source": [
+    { name: "Any", tags: [] },
+    { name: "Yes", tags: ["opensource"] },
+    { name: "Proprietary", tags: ["proprietary"] },
+  ],
+  "Cost": [
+    { name: "Any", tags: [] },
+    { name: "Free to start", tags: ["cost_free"] },
+    { name: "Not free", tags: ["cost_notfree"] },
+  ],
   Consistent: [
     { name: "Any", tags: [] },
     { name: "Immediate", tags: ["consistent_immediate"] },
@@ -196,12 +218,7 @@ const questions = {
   "Easy to horizontal scale": [
     { name: "Any", tags: [] },
     { name: "Yes", tags: ["horizontal_scaling"] },
-  ],
-  "Open Source": [
-    { name: "Any", tags: [] },
-    { name: "Yes", tags: ["opensource"] },
-    { name: "Proprietary ", tags: ["proprietary"] },
-  ],
+  ]
 };
 
 let dbElement = document.querySelector("#databases");
