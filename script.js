@@ -36,6 +36,30 @@ const databases = {
         ],
       },
       {
+        name: "Redshift",
+        tags: [
+          "relation",
+          "consistent_immediate",
+          "unstructured",
+          "proprietary",
+          "commonusecase_login",
+          "cost_free",
+          "datawarehouse"
+        ],
+      },
+      {
+        name: "Snowflake",
+        tags: [
+          "relation",
+          "consistent_immediate",
+          "unstructured",
+          "proprietary",
+          "commonusecase_login",
+          "cost_free",
+          "datawarehouse"
+        ],
+      },
+      {
         name: "Oracle",
         tags: [
           "relation",
@@ -185,7 +209,8 @@ const questions = {
     { name: "Visualize relationships", tags: ["commonusecase_visualize"] },
     { name: "Monetary transactions", tags: ["consistent_immediate"] },
     { name: "Caching applications", tags: ["memory"] },
-    { name: "Lightweight file database", tags: ["filedatabase"] }
+    { name: "Lightweight file database", tags: ["filedatabase"] },
+    { name: "Data warehouse", tags: ["datawarehouse"] }
   ],
   "Database Type": [
     { name: "Any", tags: [] },
