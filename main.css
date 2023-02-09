@@ -70,10 +70,13 @@ header h1{
 }
 
 footer{
-    background:#4c87d4;
-    color:white;
+    background: #4c87d4;
+    color: white;
     text-align: center;
-    padding:50px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 50px;
+    overflow: hidden;
 }
 footer a{
     color:white !important;
